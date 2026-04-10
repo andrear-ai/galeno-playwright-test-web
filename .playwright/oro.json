@@ -2,17 +2,17 @@
   "cookies": [
     {
       "name": "OClmoOot",
-      "value": "AzEFUnOdAQAAKtUjyymRnZQ8XO-g5c6nIDWEl8SILPCfFg63ntPuaZpQN_QiAb6ubRCucmVTwH8AADQwAAAAAA|1|0|dd24f0a379541a138a9a8a23e11c3eb56d50b923",
+      "value": "A5mOpXedAQAAmLVjYfjxn4KyzI00BSFI3ekqo14jEK_c0Fl_VJMch76k8RdJAbqPzGC7pWVTwH8AADQwAAAAAA|1|0|05e924db2b230b9923cfd3df993f3d0cc7cdf2c2",
       "domain": "portal-test.galeno.com.ar",
       "path": "/",
-      "expires": 1810316251.193281,
+      "expires": 1810388837.849848,
       "httpOnly": false,
       "secure": false,
       "sameSite": "Lax"
     },
     {
       "name": "TS01dc4fc6",
-      "value": "010de9c722a951f477001de4e9ab4f63a8ee530cc0b5da9678092ebb54d298d20a46bc39b6799992cf68ce06d3e4b6a42448bf9fc2",
+      "value": "010de9c722472c70df61353f6c6a986159ffc05da06bd7ab8a9b424863717e0a6866145e033baf3a7db2d5b781a0878031a3be96e1",
       "domain": "portal-test.galeno.com.ar",
       "path": "/",
       "expires": -1,
@@ -22,147 +22,57 @@
     },
     {
       "name": "_gcl_au",
-      "value": "1.1.1437211682.1775756249",
+      "value": "1.1.230089428.1775828832",
       "domain": ".galeno.com.ar",
       "path": "/",
-      "expires": 1783532248,
+      "expires": 1783604832,
       "httpOnly": false,
       "secure": false,
       "sameSite": "Lax"
     },
     {
       "name": "_fbp",
-      "value": "fb.2.1775756249656.300987675416605609",
+      "value": "fb.2.1775828832482.426397795863910523",
       "domain": ".galeno.com.ar",
       "path": "/",
-      "expires": 1783532259,
+      "expires": 1783604845,
       "httpOnly": false,
       "secure": false,
       "sameSite": "Lax"
-    },
-    {
-      "name": "_gid",
-      "value": "GA1.3.1858168476.1775756250",
-      "domain": ".galeno.com.ar",
-      "path": "/",
-      "expires": 1775842651,
-      "httpOnly": false,
-      "secure": false,
-      "sameSite": "Lax"
-    },
-    {
-      "name": "_ga",
-      "value": "GA1.1.1568209633.1775756249",
-      "domain": ".galeno.com.ar",
-      "path": "/",
-      "expires": 1810316251.561518,
-      "httpOnly": false,
-      "secure": false,
-      "sameSite": "Lax"
-    },
-    {
-      "name": "IDE",
-      "value": "AHWqTUn-zqFxeUuO_YZTAs4zVz4b9-EVVpD99acSm-ICM90rPez_dk7yRFJSfHp3",
-      "domain": ".doubleclick.net",
-      "path": "/",
-      "expires": 1810316251.564815,
-      "httpOnly": true,
-      "secure": true,
-      "sameSite": "None"
-    },
-    {
-      "name": "_ga_123456789",
-      "value": "GS2.1.s1775756248$o1$g1$t1775756251$j57$l0$h1055257657",
-      "domain": ".galeno.com.ar",
-      "path": "/",
-      "expires": 1810316251.578106,
-      "httpOnly": false,
-      "secure": false,
-      "sameSite": "Lax"
-    },
-    {
-      "name": "_hjSessionUser_3492355",
-      "value": "eyJpZCI6IjRmM2Q0N2Q0LTc0NGItNTc0MC05NWRhLWI5MmRlMGI5NTYyMSIsImNyZWF0ZWQiOjE3NzU3NTYyNTM5ODAsImV4aXN0aW5nIjpmYWxzZX0=",
-      "domain": ".galeno.com.ar",
-      "path": "/",
-      "expires": 1807292253,
-      "httpOnly": false,
-      "secure": true,
-      "sameSite": "None"
-    },
-    {
-      "name": "_hjSession_3492355",
-      "value": "eyJpZCI6ImI1ZGU0ZDRiLTdhZWItNGNhYS1iNjI5LWI2OGE0YmU2ZmI0ZCIsImMiOjE3NzU3NTYyNTM5ODEsInMiOjAsInIiOjAsInNiIjowLCJzciI6MCwic2UiOjAsImZzIjoxLCJzcCI6MX0=",
-      "domain": ".galeno.com.ar",
-      "path": "/",
-      "expires": 1775758053,
-      "httpOnly": false,
-      "secure": true,
-      "sameSite": "None"
     },
     {
       "name": "CLID",
-      "value": "c2b381934b214275b357f5cd54f7b92e.20260409.20270409",
+      "value": "35d95f2388f2402a83fb5627cac5c590.20260410.20270410",
       "domain": "www.clarity.ms",
       "path": "/",
-      "expires": 1807292253.986656,
+      "expires": 1807364832.645143,
       "httpOnly": true,
       "secure": true,
       "sameSite": "None"
     },
     {
       "name": "_clck",
-      "value": "10rhos2%5E2%5Eg52%5E0%5E2290",
+      "value": "16csu0z%5E2%5Eg53%5E0%5E2291",
       "domain": ".galeno.com.ar",
       "path": "/",
-      "expires": 1807292254,
+      "expires": 1807364832,
       "httpOnly": false,
       "secure": false,
       "sameSite": "Lax"
     },
     {
-      "name": "_clsk",
-      "value": "gegnbh%5E1775756254983%5E1%5E1%5Ed.clarity.ms%2Fcollect",
+      "name": "_gid",
+      "value": "GA1.3.672819853.1775828837",
       "domain": ".galeno.com.ar",
       "path": "/",
-      "expires": 1775842654,
+      "expires": 1775915240,
       "httpOnly": false,
       "secure": false,
       "sameSite": "Lax"
-    },
-    {
-      "name": "MUID",
-      "value": "1359A66EA5E36C770D32B158A4F66DAF",
-      "domain": ".bing.com",
-      "path": "/",
-      "expires": 1809452255.988226,
-      "httpOnly": false,
-      "secure": true,
-      "sameSite": "None"
-    },
-    {
-      "name": "MR",
-      "value": "0",
-      "domain": ".c.bing.com",
-      "path": "/",
-      "expires": 1776361055.988408,
-      "httpOnly": false,
-      "secure": true,
-      "sameSite": "None"
-    },
-    {
-      "name": "SRM_B",
-      "value": "1359A66EA5E36C770D32B158A4F66DAF",
-      "domain": ".c.bing.com",
-      "path": "/",
-      "expires": 1809452255.988491,
-      "httpOnly": false,
-      "secure": true,
-      "sameSite": "None"
     },
     {
       "name": "SM",
-      "value": "C",
+      "value": "T",
       "domain": ".c.clarity.ms",
       "path": "/",
       "expires": -1,
@@ -172,60 +82,80 @@
     },
     {
       "name": "MUID",
-      "value": "1359A66EA5E36C770D32B158A4F66DAF",
+      "value": "03144F7B64BB69ED2DC3584C60BB6756",
       "domain": ".clarity.ms",
       "path": "/",
-      "expires": 1809452256.144494,
+      "expires": 1809524837.21338,
       "httpOnly": false,
       "secure": true,
       "sameSite": "None"
     },
     {
-      "name": "MR",
-      "value": "0",
-      "domain": ".c.clarity.ms",
+      "name": "IDE",
+      "value": "AHWqTUk41rdkAl4qNOcPG7UcI1-0ppLGe66lYO4e7NebffgJdGXl90mXnFUAIyaM",
+      "domain": ".doubleclick.net",
       "path": "/",
-      "expires": 1776361056.144765,
-      "httpOnly": false,
+      "expires": 1810388837.987628,
+      "httpOnly": true,
       "secure": true,
       "sameSite": "None"
     },
     {
-      "name": "ANONCHK",
-      "value": "0",
-      "domain": ".c.clarity.ms",
+      "name": "_ga_123456789",
+      "value": "GS2.1.s1775828832$o1$g1$t1775828837$j55$l0$h1674247097",
+      "domain": ".galeno.com.ar",
       "path": "/",
-      "expires": 1775756856.14485,
+      "expires": 1810388837.997445,
       "httpOnly": false,
-      "secure": true,
-      "sameSite": "None"
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_clsk",
+      "value": "8rkno%5E1775828838922%5E2%5E1%5Ej.clarity.ms%2Fcollect",
+      "domain": ".galeno.com.ar",
+      "path": "/",
+      "expires": 1775915238,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_ga",
+      "value": "GA1.1.1331722299.1775828833",
+      "domain": ".galeno.com.ar",
+      "path": "/",
+      "expires": 1810388840.629535,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
     },
     {
       "name": "_gat",
       "value": "1",
       "domain": ".galeno.com.ar",
       "path": "/",
-      "expires": 1775756319,
+      "expires": 1775828905,
       "httpOnly": false,
       "secure": false,
       "sameSite": "Lax"
     },
     {
       "name": "_ga_NRJ6QKLR79",
-      "value": "GS2.1.s1775756248$o1$g1$t1775756259$j49$l0$h0",
+      "value": "GS2.1.s1775828832$o1$g1$t1775828845$j47$l0$h0",
       "domain": ".galeno.com.ar",
       "path": "/",
-      "expires": 1810316259.534191,
+      "expires": 1810388845.211255,
       "httpOnly": false,
       "secure": false,
       "sameSite": "Lax"
     },
     {
       "name": "_ga_DVCJCVMHX1",
-      "value": "GS2.1.s1775756250$o1$g1$t1775756259$j51$l0$h0",
+      "value": "GS2.1.s1775828836$o1$g1$t1775828845$j51$l0$h0",
       "domain": ".galeno.com.ar",
       "path": "/",
-      "expires": 1810316259.536856,
+      "expires": 1810388845.21339,
       "httpOnly": false,
       "secure": false,
       "sameSite": "Lax"
@@ -237,7 +167,7 @@
       "localStorage": [
         {
           "name": "lastExternalReferrerTime",
-          "value": "1775756249649"
+          "value": "1775828832471"
         },
         {
           "name": "versionWeb",
@@ -249,23 +179,23 @@
         },
         {
           "name": "_gcl_ls",
-          "value": "{\"schema\":\"gcl\",\"version\":1,\"gcl_ctr\":{\"value\":{\"value\":0,\"timeouts\":0,\"errors\":0,\"eopCount\":0,\"creationTimeMs\":1775756248679},\"expires\":1783532248679}}"
+          "value": "{\"schema\":\"gcl\",\"version\":1,\"gcl_ctr\":{\"value\":{\"value\":0,\"timeouts\":0,\"errors\":0,\"eopCount\":0,\"creationTimeMs\":1775828832287},\"expires\":1783604832287}}"
         },
         {
           "name": "l_FTzyeq12rr",
-          "value": "17757562490633250396940"
+          "value": "17758288364373409056909"
         },
         {
           "name": "gtmBrowserId",
-          "value": "1775757100361"
+          "value": "1775829484461"
         },
         {
           "name": "FTzyeq12rr",
-          "value": "AzEFUnOdAQAA4WxYxyJyCSfzBMIyZ3bZm5Z0ghutVDiW-Rjn_dPuaZpQN_QiAb6ubRCucmVTwH8AADQwAAAAAA=="
+          "value": "A5mOpXedAQAA1tuZ0QQdWqnjGFWdcawLrLiPjzMm3jV5kXex6JMch76k8RdJAbqPzGC7pWVTwH8AADQwAAAAAA=="
         },
         {
           "name": "persist:root",
-          "value": "{\"socioLogin\":\"{\\\"loading\\\":true,\\\"error\\\":false,\\\"errorMessage\\\":\\\"\\\",\\\"openSnackBar\\\":false,\\\"socio\\\":{\\\"credencial\\\":\\\"0235782901\\\",\\\"nombre\\\":\\\"Alejandro\\\",\\\"apellido\\\":\\\"Gomez\\\",\\\"color\\\":\\\"ORO\\\",\\\"estado\\\":\\\"1\\\",\\\"sexo\\\":\\\"M\\\",\\\"nroIntegrante\\\":\\\"01\\\",\\\"nombreTarjeta\\\":\\\"Alejandro\\\",\\\"letraTarjeta\\\":\\\"A\\\",\\\"suspendido\\\":true,\\\"parentesto\\\":\\\"CON\\\",\\\"correlTit\\\":\\\"0\\\",\\\"segmento\\\":\\\"6\\\"},\\\"accessToken\\\":\\\"eyJhbGciOiJSUzI1NiIsImtpZCI6IkM2REEwNjI3MzVBQzlBQjEwRkY4MjZGMzQ0MjQ1RDFEOUY3MjhCNDUiLCJ0eXAiOiJKV1QiLCJ4NXQiOiJ4dG9HSnpXc21yRVAtQ2J6UkNSZEhaOXlpMFUifQ.eyJuYmYiOjE3NzU3NTYyNTksImV4cCI6MTc3NTc1OTg1OSwiaXNzIjoiaHR0cDovL2lkZW50aXR5LXNlcnZlci5hcGxpY2FjaW9uZXMuc3ZjLmNsdXN0ZXIubG9jYWwiLCJhdWQiOiJodHRwOi8vaWRlbnRpdHktc2VydmVyLmFwbGljYWNpb25lcy5zdmMuY2x1c3Rlci5sb2NhbC9yZXNvdXJjZXMiLCJjbGllbnRfaWQiOiJHYWxlbm9Tb2x1dGlvbnMiLCJzdWIiOiIyNzg3NzEwMCIsImF1dGhfdGltZSI6MTc3NTc1NjI1OSwiaWRwIjoibG9jYWwiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiIyNzg3NzEwMCIsImNyZWRlbmNpYWwiOiIwMjM1NzgyOTAxIiwiY29sb3IiOiJPUk8iLCJub21icmUiOiJBbGVqYW5kcm8iLCJhcGVsbGlkbyI6IkdvbWV6Iiwic2V4byI6Ik0iLCJlc3RhZG8iOiIxIiwibWVuc2FqZSI6IkFTT0NJQURPIE9LIiwicGFyZW50ZXNjbyI6IkNPTiIsImNvcnJlbFRpdCI6IjAiLCJzZWdtZW50byI6IjYiLCJzY29wZSI6WyJvZmZsaW5lX2FjY2VzcyJdLCJhbXIiOlsicGFzc3dvcmQiXX0.Jm8tp43zAQWnp15k-UPYjMdLIGjyFcKdMVpqls4ogHegZPd1yeG0pjcKQGB4uEKB2r5Dkr0f8Nw69gpsDGjN_DzNZ-8Sr_ier9x43EOdLYYrpwXUM9evYr9KAXdm6I1H_4GZ8KBBVJ3Q-_MkTer4IN_0Jh_2fFrwYB62P8nnrUnsMRNloS-dJ_eHitWTbHWuupM4KMClG3e0EZ3A4EUaQzxhYecKapLFXv5bWINAkWRPJTITn1hs-HCt_zBvRjz9uEthGWuOqM51lcxG3w1DVQ8PlfbsafL_b0VgY1H0Zhu-G3AMC711ntUUHGDiloDbI-svT9TvufVleNcpl_Ol5w\\\",\\\"suspendido\\\":false,\\\"integrantes\\\":[],\\\"loginPaso\\\":\\\"LOGIN\\\",\\\"integrantesDrawerOpen\\\":false,\\\"mail\\\":\\\"\\\",\\\"credencial\\\":\\\"\\\",\\\"sessionExpirada\\\":false,\\\"sessionTime\\\":\\\"2026-04-09T17:37:39.479Z\\\"}\",\"favorito\":\"{\\\"loading\\\":false}\",\"prestadorLogin\":\"{\\\"loading\\\":true,\\\"error\\\":false,\\\"errorMessage\\\":\\\"\\\"}\",\"empresaLogin\":\"{\\\"loading\\\":true,\\\"error\\\":false,\\\"errorMessage\\\":\\\"\\\"}\",\"credencialProvisoria\":\"{\\\"loading\\\":false,\\\"error\\\":null,\\\"credenciales\\\":null}\",\"facturasElectronicas\":\"{\\\"numeroAdhesion\\\":0,\\\"loading\\\":false,\\\"error\\\":null}\",\"resultadoLaboratorio\":\"{\\\"loading\\\":true,\\\"error\\\":null,\\\"integrantes\\\":[],\\\"resultados\\\":null}\",\"turno\":\"{\\\"loading\\\":true,\\\"turnoLoading\\\":false,\\\"loadingPrimerosTurnos\\\":false,\\\"turnoProximosLoading\\\":false,\\\"turnoPreviosLoading\\\":false,\\\"integrantes\\\":[],\\\"modalidad\\\":[],\\\"especialidades\\\":[],\\\"profesionalesTurno\\\":[],\\\"practicas\\\":[],\\\"centrosMedicos\\\":[],\\\"profesionales\\\":[],\\\"diasTurnos\\\":[],\\\"horarios\\\":[],\\\"primerosTurnos\\\":[],\\\"copago\\\":\\\"0\\\",\\\"origen\\\":true,\\\"loadingContacto\\\":false}\",\"tramite\":\"{\\\"loading\\\":true,\\\"loadingCMS\\\":false,\\\"integrantes\\\":[],\\\"filtrosEstado\\\":[],\\\"filtrosTipo\\\":[],\\\"noLeidos\\\":false,\\\"tramites\\\":[],\\\"comboBoxTramite\\\":null,\\\"comentario\\\":\\\"\\\",\\\"files\\\":{},\\\"order\\\":\\\"desc\\\",\\\"orderBy\\\":\\\"fecha\\\",\\\"keyTramiteSeleccionado\\\":\\\"\\\",\\\"idTipoTramite\\\":\\\"\\\"}\",\"homeSocio\":\"{\\\"menuSelected\\\":\\\"inicio\\\",\\\"loading\\\":true,\\\"error\\\":null,\\\"nominasCartilla\\\":[],\\\"nominasCartillaPDF\\\":[]}\",\"formularios\":\"{\\\"loading\\\":true,\\\"error\\\":null}\",\"preguntasFrecuentes\":\"{\\\"loading\\\":true,\\\"error\\\":null,\\\"codigoCopago\\\":null}\",\"sucursal\":\"{\\\"loading\\\":false,\\\"error\\\":null,\\\"positions\\\":[]}\",\"consultasmedicas\":\"{\\\"consultasMedicasArray\\\":[],\\\"consultasMedicasPendientesArray\\\":[],\\\"cantidadConsultasMedicas\\\":\\\"\\\",\\\"calificarDesconocer\\\":null,\\\"loading\\\":true,\\\"loadingCM\\\":false,\\\"error\\\":null,\\\"errorCM\\\":null}\",\"telefonosUtiles\":\"{\\\"loading\\\":true,\\\"error\\\":null}\",\"clubBeneficios\":\"{\\\"loading\\\":true,\\\"error\\\":null}\",\"sanatorios\":\"{\\\"loading\\\":true,\\\"error\\\":null}\",\"loading\":\"{\\\"loading\\\":false,\\\"error\\\":null}\",\"cartilla\":\"{\\\"cartillas\\\":[],\\\"provincias\\\":[],\\\"localidades\\\":[],\\\"rubros\\\":[],\\\"especialidades\\\":[],\\\"barrios\\\":[],\\\"direcciones\\\":[],\\\"cantidadPrestadores\\\":0,\\\"saveCheck\\\":false,\\\"profesional\\\":\\\"\\\",\\\"revisionCMS\\\":0,\\\"zonas\\\":[]}\",\"centrosMedicos\":\"{\\\"loading\\\":true,\\\"error\\\":null}\",\"homeEmpresa\":\"{}\",\"facturaElectronicaEmpresa\":\"{\\\"listaFacturas\\\":[]}\",\"servicioOnlineSocio\":\"{\\\"socioOnline\\\":null,\\\"socioOnlineCMS\\\":null,\\\"loading\\\":true,\\\"loadingCMS\\\":false,\\\"error\\\":null,\\\"errorCMS\\\":null,\\\"servicioOnlineSocioCMS\\\":null,\\\"socioCredencial\\\":null}\",\"redesCapitadasPrestadores\":\"{\\\"credencial\\\":null,\\\"modelo\\\":null,\\\"loading\\\":true,\\\"error\\\":null}\",\"ayudaTecnica\":\"{\\\"loading\\\":true,\\\"error\\\":null}\",\"homePrestador\":\"{}\",\"pagos\":\"{}\",\"liquidacionesState\":\"{}\",\"conectividades\":\"{\\\"conectividades\\\":null,\\\"loading\\\":true,\\\"error\\\":null,\\\"canales\\\":null,\\\"canalSelected\\\":\\\"\\\",\\\"respuestaElegilibilidad\\\":null,\\\"prestaciones\\\":[],\\\"diagnosticos\\\":[],\\\"respSolicitudAutorizacion\\\":null,\\\"respAutorizacionPdf\\\":null,\\\"RespuestaSolicitudTotales\\\":null,\\\"respIngresoDiagnostico\\\":null,\\\"respuestaAnulacion\\\":null,\\\"respuestaTransacciones\\\":null}\",\"registroInternaciones\":\"{\\\"loaderInternacionesData\\\":false}\",\"contratosPrestador\":\"{}\",\"medicamentosPrestador\":\"{}\",\"padronesPrestador\":\"{\\\"padrones\\\":null,\\\"loading\\\":true,\\\"error\\\":null}\",\"manualesOperativos\":\"{\\\"loading\\\":true,\\\"error\\\":null}\",\"autorizacionesState\":\"{}\",\"historyState\":\"{\\\"pathname\\\":\\\"/\\\"}\",\"informacionGeneralState\":\"{}\",\"guardiaInteligente\":\"{\\\"loading\\\":true,\\\"integrantes\\\":[],\\\"integrantesConGuardia\\\":[],\\\"especialidades\\\":[],\\\"centrosMedicos\\\":[],\\\"turnos\\\":[],\\\"copago\\\":\\\"0\\\",\\\"origen\\\":false,\\\"timer\\\":0,\\\"cantidadColaPaciente\\\":0,\\\"cantidadColaCentro\\\":0,\\\"guardiaPaso\\\":0,\\\"guardiaTienePaso0\\\":false}\",\"utils\":\"{\\\"openSnackBar\\\":false,\\\"loading\\\":false,\\\"menuSelected\\\":\\\"inicio\\\"}\",\"turnosSucursalesState\":\"{\\\"sucursales\\\":[],\\\"fromFila\\\":false,\\\"isCancel\\\":false,\\\"puedeEntrarLocal\\\":false}\",\"solicitudBajaCMS\":\"{\\\"saldo\\\":0,\\\"solicitudRepetida\\\":false,\\\"paso\\\":1,\\\"loading\\\":true,\\\"error\\\":null,\\\"dateCMSUpdate\\\":0}\",\"cambioDomicilio\":\"{\\\"provincias\\\":[],\\\"localidades\\\":[],\\\"loading\\\":true,\\\"error\\\":null}\",\"credencialVirtual\":\"{\\\"isShared\\\":false,\\\"duplicados\\\":[],\\\"credenciales\\\":[],\\\"integrantesPendingRequest\\\":[],\\\"integrantesFailedRequest\\\":[],\\\"snackBar\\\":false,\\\"snackBarMessage\\\":\\\"\\\"}\",\"facturasSocio\":\"{\\\"numeroAdhesion\\\":0,\\\"isNovedad\\\":true,\\\"puedeModificar\\\":true,\\\"loading\\\":false,\\\"novedadLeida\\\":false,\\\"fromBaja\\\":false,\\\"medioPagoAnterior\\\":\\\"\\\",\\\"fromProximoMes\\\":false,\\\"error\\\":null}\",\"llamandoDoctor\":\"{}\",\"medicamento\":\"{\\\"medicamentosCargados\\\":[],\\\"medicamentosHabilitados\\\":[],\\\"medicamentosSolicitados\\\":[],\\\"recetas\\\":[],\\\"files\\\":{},\\\"filtrosEstado\\\":[],\\\"filtrosTipo\\\":[],\\\"noLeidos\\\":false,\\\"integrantes\\\":[],\\\"verHistorial\\\":false,\\\"comentario\\\":\\\"\\\",\\\"goBackHome\\\":false}\",\"datosPersonales\":\"{\\\"loading\\\":true,\\\"error\\\":null}\",\"cartillaCMS\":\"{\\\"loadingCMS\\\":false}\",\"_persist\":\"{\\\"version\\\":-1,\\\"rehydrated\\\":true}\"}"
+          "value": "{\"socioLogin\":\"{\\\"loading\\\":true,\\\"error\\\":false,\\\"errorMessage\\\":\\\"\\\",\\\"openSnackBar\\\":false,\\\"socio\\\":{\\\"credencial\\\":\\\"0235782901\\\",\\\"nombre\\\":\\\"Alejandro\\\",\\\"apellido\\\":\\\"Gomez\\\",\\\"color\\\":\\\"ORO\\\",\\\"estado\\\":\\\"1\\\",\\\"sexo\\\":\\\"M\\\",\\\"nroIntegrante\\\":\\\"01\\\",\\\"nombreTarjeta\\\":\\\"Alejandro\\\",\\\"letraTarjeta\\\":\\\"A\\\",\\\"suspendido\\\":true,\\\"parentesto\\\":\\\"CON\\\",\\\"correlTit\\\":\\\"0\\\",\\\"segmento\\\":\\\"6\\\"},\\\"accessToken\\\":\\\"eyJhbGciOiJSUzI1NiIsImtpZCI6IkM2REEwNjI3MzVBQzlBQjEwRkY4MjZGMzQ0MjQ1RDFEOUY3MjhCNDUiLCJ0eXAiOiJKV1QiLCJ4NXQiOiJ4dG9HSnpXc21yRVAtQ2J6UkNSZEhaOXlpMFUifQ.eyJuYmYiOjE3NzU4Mjg4NDQsImV4cCI6MTc3NTgzMjQ0NCwiaXNzIjoiaHR0cDovL2lkZW50aXR5LXNlcnZlci5hcGxpY2FjaW9uZXMuc3ZjLmNsdXN0ZXIubG9jYWwiLCJhdWQiOiJodHRwOi8vaWRlbnRpdHktc2VydmVyLmFwbGljYWNpb25lcy5zdmMuY2x1c3Rlci5sb2NhbC9yZXNvdXJjZXMiLCJjbGllbnRfaWQiOiJHYWxlbm9Tb2x1dGlvbnMiLCJzdWIiOiIyNzg3NzEwMCIsImF1dGhfdGltZSI6MTc3NTgyODg0NCwiaWRwIjoibG9jYWwiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiIyNzg3NzEwMCIsImNyZWRlbmNpYWwiOiIwMjM1NzgyOTAxIiwiY29sb3IiOiJPUk8iLCJub21icmUiOiJBbGVqYW5kcm8iLCJhcGVsbGlkbyI6IkdvbWV6Iiwic2V4byI6Ik0iLCJlc3RhZG8iOiIxIiwibWVuc2FqZSI6IkFTT0NJQURPIE9LIiwicGFyZW50ZXNjbyI6IkNPTiIsImNvcnJlbFRpdCI6IjAiLCJzZWdtZW50byI6IjYiLCJzY29wZSI6WyJvZmZsaW5lX2FjY2VzcyJdLCJhbXIiOlsicGFzc3dvcmQiXX0.eqp9BJjC6ySrw7GDEgCNq5A6FXKTFhoMAMfRmr9Bpq6qnriqAWPi3h2em99zj1EpUdVXDbCoCiEOk6zGsj5dnUxakALGEYOF1ZuvBVuX1OAPkKEJXxbHQO5ZByBXDOHyos4p_hEYZ6fgORxhQr35oKOjMUBlfSfpdMr3Imm9PulDTbwh8-dx6sTLoGzxcShIdF1TIV4RIElyi8S1y4KNOm3fcvnuH2-nXEOhE6oGrTrPrJhWa0erg0kR1XsmfMvZ_eKDglVs0WASj24xfESu_mJZT-spNnSyq9JOjuubBUj5R1B-2iTf6IxoCEplYRfTnm6npX0eIFdgmnjonjy2UA\\\",\\\"suspendido\\\":false,\\\"integrantes\\\":[],\\\"loginPaso\\\":\\\"LOGIN\\\",\\\"integrantesDrawerOpen\\\":false,\\\"mail\\\":\\\"\\\",\\\"credencial\\\":\\\"\\\",\\\"sessionExpirada\\\":false,\\\"sessionTime\\\":\\\"2026-04-10T13:47:25.189Z\\\"}\",\"favorito\":\"{\\\"loading\\\":false}\",\"prestadorLogin\":\"{\\\"loading\\\":true,\\\"error\\\":false,\\\"errorMessage\\\":\\\"\\\"}\",\"empresaLogin\":\"{\\\"loading\\\":true,\\\"error\\\":false,\\\"errorMessage\\\":\\\"\\\"}\",\"credencialProvisoria\":\"{\\\"loading\\\":false,\\\"error\\\":null,\\\"credenciales\\\":null}\",\"facturasElectronicas\":\"{\\\"numeroAdhesion\\\":0,\\\"loading\\\":false,\\\"error\\\":null}\",\"resultadoLaboratorio\":\"{\\\"loading\\\":true,\\\"error\\\":null,\\\"integrantes\\\":[],\\\"resultados\\\":null}\",\"turno\":\"{\\\"loading\\\":true,\\\"turnoLoading\\\":false,\\\"loadingPrimerosTurnos\\\":false,\\\"turnoProximosLoading\\\":false,\\\"turnoPreviosLoading\\\":false,\\\"integrantes\\\":[],\\\"modalidad\\\":[],\\\"especialidades\\\":[],\\\"profesionalesTurno\\\":[],\\\"practicas\\\":[],\\\"centrosMedicos\\\":[],\\\"profesionales\\\":[],\\\"diasTurnos\\\":[],\\\"horarios\\\":[],\\\"primerosTurnos\\\":[],\\\"copago\\\":\\\"0\\\",\\\"origen\\\":true,\\\"loadingContacto\\\":false}\",\"tramite\":\"{\\\"loading\\\":true,\\\"loadingCMS\\\":false,\\\"integrantes\\\":[],\\\"filtrosEstado\\\":[],\\\"filtrosTipo\\\":[],\\\"noLeidos\\\":false,\\\"tramites\\\":[],\\\"comboBoxTramite\\\":null,\\\"comentario\\\":\\\"\\\",\\\"files\\\":{},\\\"order\\\":\\\"desc\\\",\\\"orderBy\\\":\\\"fecha\\\",\\\"keyTramiteSeleccionado\\\":\\\"\\\",\\\"idTipoTramite\\\":\\\"\\\"}\",\"homeSocio\":\"{\\\"menuSelected\\\":\\\"inicio\\\",\\\"loading\\\":true,\\\"error\\\":null,\\\"nominasCartilla\\\":[],\\\"nominasCartillaPDF\\\":[]}\",\"formularios\":\"{\\\"loading\\\":true,\\\"error\\\":null}\",\"preguntasFrecuentes\":\"{\\\"loading\\\":true,\\\"error\\\":null,\\\"codigoCopago\\\":null}\",\"sucursal\":\"{\\\"loading\\\":false,\\\"error\\\":null,\\\"positions\\\":[]}\",\"consultasmedicas\":\"{\\\"consultasMedicasArray\\\":[],\\\"consultasMedicasPendientesArray\\\":[],\\\"cantidadConsultasMedicas\\\":\\\"\\\",\\\"calificarDesconocer\\\":null,\\\"loading\\\":true,\\\"loadingCM\\\":false,\\\"error\\\":null,\\\"errorCM\\\":null}\",\"telefonosUtiles\":\"{\\\"loading\\\":true,\\\"error\\\":null}\",\"clubBeneficios\":\"{\\\"loading\\\":true,\\\"error\\\":null}\",\"sanatorios\":\"{\\\"loading\\\":true,\\\"error\\\":null}\",\"loading\":\"{\\\"loading\\\":false,\\\"error\\\":null}\",\"cartilla\":\"{\\\"cartillas\\\":[],\\\"provincias\\\":[],\\\"localidades\\\":[],\\\"rubros\\\":[],\\\"especialidades\\\":[],\\\"barrios\\\":[],\\\"direcciones\\\":[],\\\"cantidadPrestadores\\\":0,\\\"saveCheck\\\":false,\\\"profesional\\\":\\\"\\\",\\\"revisionCMS\\\":0,\\\"zonas\\\":[]}\",\"centrosMedicos\":\"{\\\"loading\\\":true,\\\"error\\\":null}\",\"homeEmpresa\":\"{}\",\"facturaElectronicaEmpresa\":\"{\\\"listaFacturas\\\":[]}\",\"servicioOnlineSocio\":\"{\\\"socioOnline\\\":null,\\\"socioOnlineCMS\\\":null,\\\"loading\\\":true,\\\"loadingCMS\\\":false,\\\"error\\\":null,\\\"errorCMS\\\":null,\\\"servicioOnlineSocioCMS\\\":null,\\\"socioCredencial\\\":null}\",\"redesCapitadasPrestadores\":\"{\\\"credencial\\\":null,\\\"modelo\\\":null,\\\"loading\\\":true,\\\"error\\\":null}\",\"ayudaTecnica\":\"{\\\"loading\\\":true,\\\"error\\\":null}\",\"homePrestador\":\"{}\",\"pagos\":\"{}\",\"liquidacionesState\":\"{}\",\"conectividades\":\"{\\\"conectividades\\\":null,\\\"loading\\\":true,\\\"error\\\":null,\\\"canales\\\":null,\\\"canalSelected\\\":\\\"\\\",\\\"respuestaElegilibilidad\\\":null,\\\"prestaciones\\\":[],\\\"diagnosticos\\\":[],\\\"respSolicitudAutorizacion\\\":null,\\\"respAutorizacionPdf\\\":null,\\\"RespuestaSolicitudTotales\\\":null,\\\"respIngresoDiagnostico\\\":null,\\\"respuestaAnulacion\\\":null,\\\"respuestaTransacciones\\\":null}\",\"registroInternaciones\":\"{\\\"loaderInternacionesData\\\":false}\",\"contratosPrestador\":\"{}\",\"medicamentosPrestador\":\"{}\",\"padronesPrestador\":\"{\\\"padrones\\\":null,\\\"loading\\\":true,\\\"error\\\":null}\",\"manualesOperativos\":\"{\\\"loading\\\":true,\\\"error\\\":null}\",\"autorizacionesState\":\"{}\",\"historyState\":\"{\\\"pathname\\\":\\\"/\\\"}\",\"informacionGeneralState\":\"{}\",\"guardiaInteligente\":\"{\\\"loading\\\":true,\\\"integrantes\\\":[],\\\"integrantesConGuardia\\\":[],\\\"especialidades\\\":[],\\\"centrosMedicos\\\":[],\\\"turnos\\\":[],\\\"copago\\\":\\\"0\\\",\\\"origen\\\":false,\\\"timer\\\":0,\\\"cantidadColaPaciente\\\":0,\\\"cantidadColaCentro\\\":0,\\\"guardiaPaso\\\":0,\\\"guardiaTienePaso0\\\":false}\",\"utils\":\"{\\\"openSnackBar\\\":false,\\\"loading\\\":false,\\\"menuSelected\\\":\\\"inicio\\\"}\",\"turnosSucursalesState\":\"{\\\"sucursales\\\":[],\\\"fromFila\\\":false,\\\"isCancel\\\":false,\\\"puedeEntrarLocal\\\":false}\",\"solicitudBajaCMS\":\"{\\\"saldo\\\":0,\\\"solicitudRepetida\\\":false,\\\"paso\\\":1,\\\"loading\\\":true,\\\"error\\\":null,\\\"dateCMSUpdate\\\":0}\",\"cambioDomicilio\":\"{\\\"provincias\\\":[],\\\"localidades\\\":[],\\\"loading\\\":true,\\\"error\\\":null}\",\"credencialVirtual\":\"{\\\"isShared\\\":false,\\\"duplicados\\\":[],\\\"credenciales\\\":[],\\\"integrantesPendingRequest\\\":[],\\\"integrantesFailedRequest\\\":[],\\\"snackBar\\\":false,\\\"snackBarMessage\\\":\\\"\\\"}\",\"facturasSocio\":\"{\\\"numeroAdhesion\\\":0,\\\"isNovedad\\\":true,\\\"puedeModificar\\\":true,\\\"loading\\\":false,\\\"novedadLeida\\\":false,\\\"fromBaja\\\":false,\\\"medioPagoAnterior\\\":\\\"\\\",\\\"fromProximoMes\\\":false,\\\"error\\\":null}\",\"llamandoDoctor\":\"{}\",\"medicamento\":\"{\\\"medicamentosCargados\\\":[],\\\"medicamentosHabilitados\\\":[],\\\"medicamentosSolicitados\\\":[],\\\"recetas\\\":[],\\\"files\\\":{},\\\"filtrosEstado\\\":[],\\\"filtrosTipo\\\":[],\\\"noLeidos\\\":false,\\\"integrantes\\\":[],\\\"verHistorial\\\":false,\\\"comentario\\\":\\\"\\\",\\\"goBackHome\\\":false}\",\"datosPersonales\":\"{\\\"loading\\\":true,\\\"error\\\":null}\",\"cartillaCMS\":\"{\\\"loadingCMS\\\":false}\",\"_persist\":\"{\\\"version\\\":-1,\\\"rehydrated\\\":true}\"}"
         }
       ]
     }
