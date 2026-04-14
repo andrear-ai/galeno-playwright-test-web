@@ -1,47 +1,297 @@
-import { Page, Locator, expect } from '@playwright/test'
+import { test } from '@playwright/test'
+
+import { LoginPage } from '../pages/login.page'
+
+import { users } from '../data/users'
+
 import { esperarCarga } from '../utils/waits'
 
-export class GuardiaInteligentePage {
 
-  readonly page: Page
-  readonly guardiaInteligenteBtn: Locator
+test.setTimeout(120000)
 
-  constructor(page: Page) {
-    this.page = page
-    
-    // Buscar el botón por nombre (puede ser button o algún otro elemento)
-    this.guardiaInteligenteBtn = page.getByRole('button', { name: /Guardia Inteligente/i })
-  }
 
-  async abrirGuardiaInteligente() {
-    
-    // Esperar a que la home está cargada
-    await this.page.waitForURL('**/socio/home', { timeout: 60000 })
-    await esperarCarga(this.page)
+test('guardia inteligentes - flujo completo', async ({ page }) => {
 
-    // Esperar a que el menú lateral esté disponible
-    await this.page.waitForLoadState('domcontentloaded')
 
-    // Si no encuentra como button, intenta como elemento de texto
-    let elemento = this.guardiaInteligenteBtn
-    
-    if (await elemento.count() === 0) {
-      elemento = this.page.locator('text=/Guardia Inteligente/i').first()
-    }
 
-    // Verificar que el elemento existe y es visible
-    await expect(elemento).toBeVisible()
+  // Usuario Azul
 
-    // Hacer click y esperar a que cargue la página de Guardia Inteligente
-    await Promise.all([
-      this.page.waitForURL('**/socio/guardia_inteligente', { timeout: 60000 }),
-      elemento.click()
-    ])
+  const user = users.find(u => u.tipo === 'azul')
 
-    // Esperar a que termine de cargar
-    await esperarCarga(this.page)
+  if (!user) throw new Error('Usuario azul no encontrado')
 
-    // Esperar alguns segundos para verificar que llegó a la pantalla deseada
-    await this.page.waitForTimeout(9000)
-  }
-}
+ 
+
+  const loginPage = new LoginPage(page)
+
+ 
+
+  // 1. Ir a la URL de login
+
+  await page.goto('https://portal-test.galeno.com.ar/login/')
+
+ 
+
+  // 2. Loguearse con usuario Azul
+
+  await loginPage.login(user.dni, user.password)
+
+ 
+
+  // 3. Esperar a que cargue la home
+
+  await page.waitForURL('**/socio/home', { timeout: 60000 })
+
+ 
+
+  // 4. Tomar screenshot de la home para verificar
+
+  await page.screenshot({ path: 'home-screenshot.png', fullPage: true })
+
+ 
+
+  // 5. Buscar y hacer click en "Guardia Inteligente" usando el rol button y el texto visible
+
+  const guardiaElement = page.getByRole('button', { name: 'Guardia Inteligente' })
+
+ 
+
+  await guardiaElement.waitFor({ state: 'visible', timeout: 60000 })
+
+  await guardiaElement.click()
+
+ 
+
+  // 6. Esperar a que cargue la página de guardia inteligente
+
+  await page.waitForURL('**/socio/guardia_inteligente', { timeout: 90000 })
+
+ 
+
+ 
+
+  // 7. Verificar que estamos en la página correcta
+
+  await test.expect(page).toHaveURL(/\/socio\/guardia_inteligente/)
+
+ 
+
+  // 8.Tomar screenshot final
+
+  await page.screenshot({ path: 'guardia-inteligente-screenshot.png', fullPage: true })
+
+ 
+
+  // Tomar screenshot adicional antes de buscar el botón INGRESAR
+
+  await page.screenshot({ path: 'antes-ingresar-screenshot.png', fullPage: true })
+
+ 
+
+  // 9. Click en el boton "Ingresar"
+
+  const ingresarButton = page.locator('#btnGIIngresar')
+
+  await ingresarButton.click({ forcé: true })
+
+ 
+
+  // 13. Seleccionar integrante "Martin" de manera más específica
+
+  const integranteOptions = page.locator('div').filter({ hasText: 'Martin' })
+
+  const MartinOption = integranteOptions.first()
+
+  await MartinOption.waitFor({ state: 'visible', timeout: 90000 })
+
+ 
+
+  // Verificar que encontramos el integrante correcto
+
+  const integranteText = await MartinOption.textContent()
+
+  console.log(`Seleccionando integrante: ${integranteText}`)
+
+  await test.expect(integranteText).toContain('Martin')
+
+ 
+
+  await MartinOption.scrollIntoViewIfNeeded()
+
+ 
+
+  await Promise.all([
+
+    page.waitForURL('**/socio/guardia_inteligente/paso1', { timeout: 90000 }),
+
+    MartinOption.click({ force: true })
+
+  ])
+
+  // 14. Tomar screenshot final
+
+  await page.screenshot({ path: 'paso1-screenshot.png', fullPage: true })
+
+  // 15. Click en el desplegable de especialidades usando el combobox
+
+  const especialidadesCombobox = page.getByRole('combobox', { name: 'Elegí la especialidad' })
+
+ 
+
+  // Verificar si ya está expandido, si no, hacer click para expandirlo
+
+  const isExpanded = await especialidadesCombobox.getAttribute('aria-expanded') === 'true'
+
+  if (!isExpanded) {
+
+    await especialidadesCombobox.click()
+
+  }
+
+ 
+
+  // Seleccionar "Pediatria" de las opciones
+
+  await page.getByRole('option', { name: 'Pediatria' }).click()
+
+ 
+
+  // 16. Hacer click en el botón "CONTINUAR" para ir al paso 2
+
+  const continuarButton1 = page.getByRole('button', { name: 'CONTINUAR' })
+
+  await continuarButton1.waitFor({ state: 'visible', timeout: 90000 })
+
+  await continuarButton1.click()
+
+ 
+
+  // 17. Esperar a que cargue el paso 2 (seleccionar centro médico)
+
+  await page.waitForURL('**/socio/guardia_inteligente/paso2', { timeout: 90000 })
+
+ 
+
+  // 18. Verificar que estamos en la página correcta
+
+  await test.expect(page).toHaveURL(/\/socio\/guardia_inteligente\/paso2/)
+
+ 
+
+  // 19. Tomar screenshot del paso 2
+
+  await page.screenshot({ path: 'paso2-centro-medico-screenshot.png', fullPage: true })
+
+ 
+
+  // 20. Seleccionar centro médico "Sanatorio Trinidad Mitre"
+
+  const centroMitre = page.locator('div:has-text("Sanatorio Trinidad Mitre")').first()
+
+  await centroMitre.waitFor({ state: 'visible', timeout: 90000 })
+
+  await centroMitre.click()
+
+ 
+
+  // Esperar a que termine la carga después de seleccionar el centro
+
+  await esperarCarga(page)
+
+ 
+
+  // 21. Hacer click en CONTINUAR para ir al paso 3 (Confirmación)
+
+  const continuarButton2 = page.locator('btnContinuar')
+
+  await continuarButton2.click({ forcé: true })
+
+ 
+
+  // 22. Esperar a que cargue el paso 3 (confirmación)
+
+  await page.waitForURL('**/socio/guardia_inteligente/paso3', { timeout: 90000 })
+
+ 
+
+  // 23. Verificar que estamos en la página correcta
+
+  await test.expect(page).toHaveURL(/\/socio\/guardia_inteligente\/paso3/)
+
+ 
+
+  // 24. Tomar screenshot del paso 3
+
+  await page.screenshot({ path: 'paso3-confirmacion-screenshot.png', fullPage: true })
+
+ 
+
+  // 25. Hacer click en CONFIRMAR
+
+  const confirmarButton = page.getByRole('button', { name: 'CONFIRMAR' })
+
+  await confirmarButton.waitFor({ state: 'visible', timeout: 90000 })
+
+  await confirmarButton.click()
+
+ 
+
+  // 26. Esperar a que cargue la página de guardia inteligente después de confirmar
+
+  await page.waitForURL('**/socio/guardia_inteligente', { timeout: 90000 })
+
+ 
+
+  // 27. Verificar que estamos de vuelta en la página de guardia inteligente
+
+  await test.expect(page).toHaveURL(/\/socio\/guardia_inteligente/)
+
+ 
+
+  // 28. Tomar screenshot de la guardia confirmada
+
+  await page.screenshot({ path: 'guardia-confirmada-screenshot.png', fullPage: true })
+
+ 
+
+  // 36. Click en el boton Salir de la Fila
+
+  await page.locator('#btnCancelar2').click()
+
+ 
+
+  // 37. Click en SI en el modal de confirmación
+
+  const confirmarSalirButton = page.getByRole('button', { name: 'SI' })
+
+  await confirmarSalirButton.waitFor({ state: 'visible', timeout: 90000 })
+
+  await confirmarSalirButton.click()
+
+ 
+
+  // 38. Verificar que aparezca snackbar de "Cancelaste tu lugar en la fila"
+
+  const snackbar = page.locator('div:has-text("Cancelaste tu lugar en la fila")')
+
+  await snackbar.waitFor({ state: 'visible', timeout: 90000 })
+
+ 
+
+  // 39. Verificar que estamos en la página correcta y que la guardia ya no se muestra
+
+  await test.expect(page).toHaveURL(/\/socio\/guardia_inteligente/)
+
+  await test.expect(guardiaConfirmada).not.toBeVisible()
+
+ 
+
+  // 40. Tomar screenshot final
+
+  await page.screenshot({ path: 'guardia-eliminada.png', fullPage: true })
+
+ 
+
+ 
+
+ })

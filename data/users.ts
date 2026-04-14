@@ -16,8 +16,8 @@ export const users = [
   {
     tipo: "azul",
     cartillaTexto: "Cartilla Azul",
-    dni: "95116976",
+    dni: "36982434",
     password: "12345678",
-    share: { id: "02273496", correlativo: "00", plan: "azul" }
+    share: { id: "02275721", correlativo: "00", plan: "azul" }
   }
 ]
