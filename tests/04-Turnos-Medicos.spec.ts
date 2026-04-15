@@ -118,5 +118,39 @@ test('turnos medicos - flujo basico', async ({ authenticatedPage }) => {
   // .17 Tomar screenshot con Especialidad y Práctica Médica seleccionadas
   await page.screenshot({ path: 'crear-turno-especialidad-practica-seleccionadas-screenshot.png', fullPage: true })
 
+  // .18 Abrir "Centro Medico Trinidad Quilmes" en el desplegable de Centro Médico
+  const centroMedicoLabel = page.locator('label:has-text("Centro Médico")')
+  const centroMedicoCombobox = centroMedicoLabel
+    .locator(
+      'xpath=following::div[@role="combobox" and @aria-haspopup="listbox" and not(@aria-disabled="true")][1]'
+    )
+    .first()
+  
+  await centroMedicoCombobox.waitFor({ state: 'visible', timeout: 60000 })
+  const centroExpanded = (await centroMedicoCombobox.getAttribute('aria-expanded')) === 'true'
+  if (!centroExpanded) {
+    await centroMedicoCombobox.click({ force: true })
+    const centroExpandedAfterClick = (await centroMedicoCombobox.getAttribute('aria-expanded')) === 'true'
+    if (!centroExpandedAfterClick) {
+      await centroMedicoCombobox.focus()
+      await page.keyboard.press('ArrowDown') }
+
+      // .19 Seleccionar "Centro Medico Trinidad Quilmes" en el desplegable de Centro Médico
+  const consultaOption = page.getByRole('option', { name: /Centro Medico Trinidad Quilmes/i }).first()
+  await consultaOption.waitFor({ state: 'visible', timeout: 15000 })
+  await consultaOption.click()
+
+  // 20. Tomar screenshot con Centro Médico seleccionado
+  await page.screenshot({ path: 'crear-turno-centro-medico-seleccionado-screenshot.png', fullPage: true })
+
+  // 21. Hacer click en el boton "CONTINUAR"
+  const continuarButton = page.getByRole('button', { name: /id="btnContinuar"/i })
+  await continuarButton.waitFor({ state: 'visible', timeout: 60000 })
+  await continuarButton.click()
+
+  // 22. Esperar a que cargue la página de selección de turno
+  await page.waitForURL('**/socio/turno/Crear', { timeout: 90000 })
+
+  // 23. Verificar que estamos en la página correcta
   
 })
