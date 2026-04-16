@@ -45,19 +45,19 @@ test('guardia inteligentes - flujo completo', async ({ page }) => {
   const ingresarButton = page.locator('#btnGIIngresar')
   await ingresarButton.click({ force: true })
   
-  // 13. Seleccionar integrante "Yubesmi" de manera más específica
+  // 13. Seleccionar integrante "Martin" de manera más específica
   const integranteOptions = page.locator('div').filter({ hasText: 'Martin' })
-  const yubesmiOption = integranteOptions.first()
-  await yubesmiOption.waitFor({ state: 'visible', timeout: 90000 })
+  const martinOption = integranteOptions.first()
+  await martinOption.waitFor({ state: 'visible', timeout: 90000 })
   
   // Verificar que encontramos el integrante correcto
-  const integranteText = await yubesmiOption.textContent()
+  const integranteText = await martinOption.textContent()
   console.log(`Seleccionando integrante: ${integranteText}`)
   await test.expect(integranteText).toContain('Martin')
-  await yubesmiOption.scrollIntoViewIfNeeded()
+  await martinOption.scrollIntoViewIfNeeded()
   await Promise.all([
     page.waitForURL('**/socio/guardia_inteligente/paso1', { timeout: 90000 }),
-    yubesmiOption.click({ force: true })
+    martinOption.click({ force: true })
   ])
   
   // 14. Tomar screenshot final
@@ -70,8 +70,8 @@ test('guardia inteligentes - flujo completo', async ({ page }) => {
   const isExpanded = await especialidadesCombobox.getAttribute('aria-expanded') === 'true'
   if (!isExpanded) await especialidadesCombobox.click()
   
-    // Seleccionar "Pediatria" de las opciones
-  await page.getByRole('option', { name: 'Pediatria' }).click()
+    // Seleccionar "Clinica Medica" de las opciones
+  await page.getByRole('option', { name: 'Clinica Medica' }).click()
   
   // 16. Hacer click en el botón "CONTINUAR" para ir al paso 2
   const continuarButton1 = page.getByRole('button', { name: 'CONTINUAR' })
@@ -122,6 +122,7 @@ test('guardia inteligentes - flujo completo', async ({ page }) => {
   // 28. Tomar screenshot de la guardia confirmada
   await page.screenshot({ path: 'guardia-confirmada-screenshot.png', fullPage: true })
   
+  
   // Definir el locator para la guardia confirmada usando el botón de salida de fila
   const guardiaConfirmada = page.locator('#btnCancelar2').first()
   
@@ -141,6 +142,9 @@ test('guardia inteligentes - flujo completo', async ({ page }) => {
   await test.expect(page).toHaveURL(/\/socio\/guardia_inteligente/)
   await test.expect(guardiaConfirmada).not.toBeVisible()
   
+  // Esperar 3 segundos en la pantalla para verificar visualmente que el turno se canceló
+  await page.waitForTimeout(3000)
+
   // 40. Tomar screenshot final
   await page.screenshot({ path: 'guardia-eliminada.png', fullPage: true })
 })
