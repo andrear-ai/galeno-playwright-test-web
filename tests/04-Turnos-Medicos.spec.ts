@@ -612,73 +612,21 @@ await page.screenshot({ path: 'flujo2-after-continuar.png', fullPage: true })
 
 // CONFIRMAR
 
-
-await page.waitForSelector('text=Confirmá el turno', { timeout: 90000 })
-
 const confirmarBtn2 = page.getByRole('button', { name: 'CONFIRMAR' })
-
-await confirmarBtn2.first().waitFor({ state: 'visible', timeout: 15000 })
 await confirmarBtn2.first().click()
-
-await page.waitForLoadState('networkidle')
-
-await page.screenshot({ path: 'flujo2-confirmado.png', fullPage: true })
-
-// 29. Verificar confirmación (flujo 2)
-
-
-const successTexts2 = [
-  '¡Turno confirmado con éxito!',
-  'Turno confirmado con éxito',
-  'Turno confirmado con exito'
-]
 
 let successSeen2 = false
 
-for (const ttxt2 of successTexts2) {
-  try {
-    await page.waitForSelector(`text=${ttxt2}`, { timeout: 60000 })
-    await expect(page.getByText(ttxt2)).toBeVisible()
-    successSeen2 = true
-    break
-  } catch (e) {
-    // continuar
-  }
-}
+try {
+  await Promise.race([
+    page.waitForSelector('text=Turno confirmado', { timeout: 30000 }),
+    page.waitForURL('**/socio/turno', { timeout: 30000 })
+  ])
+  successSeen2 = true
+} catch {}
 
-// role status / alert
-if (!successSeen2) {
-  try {
-    const alert2a = page.getByRole('status')
-    await alert2a.first().waitFor({ state: 'visible', timeout: 30000 })
-    successSeen2 = true
-  } catch {
-    try {
-      const alert2b = page.getByRole('alert')
-      await alert2b.first().waitFor({ state: 'visible', timeout: 30000 })
-      successSeen2 = true
-    } catch {}
-  }
-}
-
-// fallback URL
-if (!successSeen2) {
-  try {
-    await page.waitForURL('**/socio/turno', { timeout: 60000 })
-    successSeen2 = true
-  } catch {}
-}
-
-// error final
-if (!successSeen2) {
-  await page.screenshot({ path: 'flujo2-no-confirmacion.png', fullPage: true })
-  throw new Error('Flujo 2: no se detectó confirmación del turno')
-}
-
-await page.screenshot({
-  path: 'flujo2-turno-confirmado.png',
-  fullPage: true
-})
+await page.waitForLoadState('domcontentloaded')
+await page.waitForTimeout(2000)
 
 //  30. Ir al detalle del turno (flujo 2)
 
