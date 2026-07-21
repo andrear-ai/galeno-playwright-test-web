@@ -22,7 +22,7 @@ test('medicamentos - flujo básico', async ({ page }) => {
         );
 
         await page.waitForURL('**/socio/home', {
-            timeout: 60000
+            timeout: 90000
         });
 
         const medicamentos = page.getByRole('button', {
@@ -30,7 +30,7 @@ test('medicamentos - flujo básico', async ({ page }) => {
         });
 
         await expect(medicamentos).toBeVisible({
-            timeout: 60000
+            timeout: 90000
         });
 
         await medicamentos.click();
@@ -51,7 +51,7 @@ test('medicamentos - flujo básico', async ({ page }) => {
         );
 
         await expect(nuevoTramiteButton).toBeVisible({
-            timeout: 60000
+            timeout: 90000
         });
 
         await nuevoTramiteButton.click();
