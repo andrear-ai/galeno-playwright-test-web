@@ -5,7 +5,7 @@ import { esperarCarga } from '../utils/waits';
 
 test.setTimeout(180000);
 
-test('Centros Medicos - flujo básico', async ({ page }) => {
+test('Centros Vacunación - flujo básico', async ({ page }) => {
 
     const user = users.find(u => u.tipo === 'azul');
     if (!user) throw new Error('Usuario azul no encontrado');
