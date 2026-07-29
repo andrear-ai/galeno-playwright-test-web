@@ -6,7 +6,7 @@ import { esperarCarga } from '../utils/waits';
 test.setTimeout(120000);
 
 //=========================================================
-// Función para agregar a favoritos y validar snackbar
+// Función para agregar a favoritos desde el listado
 //=========================================================
 
 async function agregarFavorito(page: Page) {
@@ -18,10 +18,34 @@ async function agregarFavorito(page: Page) {
 
   const snackbar = page.getByRole('alert').first();
 
-  await expect(snackbar).toContainText('Se agrego a favoritos');
+  await expect(snackbar).toBeVisible();
+
+  await expect(snackbar).toContainText(
+    /Se agreg[oó] a favoritos|Ya tenés este prestador guardado en favoritos/
+  );
 }
 
-test('guardia inteligentes - flujo completo', async ({ page }) => {
+//=========================================================
+// Función para agregar a favoritos desde Ver Equipo Médico y Validar snackbar
+//=========================================================
+
+async function agregarFavoritoEquipoMedico(page: Page) {
+  const corazon = page.locator('svg[data-icon="heart"]').first();
+
+  await expect(corazon).toBeVisible();
+
+  await corazon.click();
+
+  const snackbar = page.getByRole('alert').first();
+
+  await expect(snackbar).toBeVisible();
+
+  await expect(snackbar).toContainText(
+    /Se agreg[oó] a favoritos|Ya tenés este prestador guardado en favoritos/
+  );
+}
+
+test('Cartilla Medica - flujo completo', async ({ page }) => {
 
   // Usuario Azul
   const user = users.find(u => u.tipo === 'azul');
@@ -169,9 +193,74 @@ await esperarCarga(page);
 // Agregar favorito y validar snackbar
 await agregarFavorito(page);
 
+///=========================================================
+// 6. Volver a Cartilla Médica y Buscar por Especialidad / Rubro Alergia
+//=========================================================
+
+await page.getByRole('button', {
+  name: 'Cartilla Médica'
+}).click();
+
+await esperarCarga(page);
+
+// Especialidad / Rubro
+await page.locator('#bucador-especialidad').click();
+await page.locator('#bucador-especialidad').fill('Alergia');
+
+await page.keyboard.press('ArrowDown');
+await page.keyboard.press('Enter');
+
+// Buscar
+await page.getByRole('button', {
+  name: /^Buscar$/
+}).click();
+
+await esperarCarga(page);
+
+// Ordenar por Cercanía
+const ordenCercania = page.locator('input[type="checkbox"]');
+
+if (!(await ordenCercania.isChecked())) {
+  await ordenCercania.check();
+}
+
+await esperarCarga(page);
+
+// Ver Equipo Médico
+await page.getByText('Ver Equipo Médico', { exact: true }).first().click();
+
+await esperarCarga(page);
+// Agregar a favoritos desde Ver Equipo Médico y validar snackbar
+
+async function agregarFavoritoEquipoMedico(page: Page) {
+
+  const corazon = page.locator('svg[data-icon="heart"]').first();
+
+  await expect(corazon).toBeVisible({
+    timeout: 10000
+  });
+
+  await corazon.click();
+
+  const snackbar = page.getByRole('alert').first();
+
+  await expect(snackbar).toBeVisible({
+    timeout: 10000
+  });
+
+  await expect(snackbar).toContainText(
+    /Se agreg[oó] a favoritos|Ya tenés este prestador guardado en favoritos/,
+    { timeout: 10000 }
+  );
+
+  // Volver
+  await page.getByText('Volver', { exact: true }).click();
+
+  await esperarCarga(page);
+}
 
 ///=========================================================
-// 6. Volver a Cartilla Home y descargar PDF
+// 7. Volver a Cartilla Home y descargar PDF
 //=========================================================
 
 await page.getByRole('button', {
